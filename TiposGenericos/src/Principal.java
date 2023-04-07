@@ -1,18 +1,28 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class Principal {
 
 	public static void main(String[] args) {
-		Cesta<Frutas> c1 = new Cesta<>();
+		Cesta<Frutas> cesta = new Cesta<>();
 		
-		c1.adiciona(new Frutas("Maçã"));
-		c1.adiciona(new Frutas("Banana"));
-		c1.adiciona(new Frutas("Melão"));
-		c1.adiciona(new Frutas("Pêra"));
-		c1.adiciona(new Frutas("Morango"));
+		cesta.adiciona(new Frutas("Maca"));
+		cesta.adiciona(new Frutas("Banana"));
+		cesta.adiciona(new Frutas("Melao"));
+		cesta.adiciona(new Frutas("Pera"));
+		cesta.adiciona(new Frutas("Morango"));
+		cesta.adiciona(new FrutaVermelha("Framboesa"));
+		
+		List<FrutaVermelha> vermelhas = new ArrayList<>();
+		vermelhas.add(new FrutaVermelha("Amora"));
+		vermelhas.add(new FrutaVermelha("Cereja"));
+		
+		//Se eu tentar adicionar a lista vermelhas dentro da cesta, ele não aceita
 		
 		
-		while(c1.temItens()) {
-			System.out.println(c1.retira());
+		while(cesta.temItens()) {
+			System.out.println(cesta.retira());
 		}
+		
 	}
 }
